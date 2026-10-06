@@ -1,13 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "VANTA Agent Bridge",
-  "version": "1.1",
-  "description": "Авто-мост между VANTA Agent и редактором brofist.io",
+  "name": "VANTA Agent",
+  "version": "2.1",
+  "description": "Нейро-строитель для brofist.io editor (OpenRouter)",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://brofist.io/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
   "content_scripts": [{
-    "matches": ["https://brofist.io/editor/*", "https://h336.github.io/Brofist-io-editor/*"],
+    "matches": ["https://brofist.io/editor/*"],
     "js": ["inject.js"],
-    "run_at": "document_idle",
-    "all_frames": true
-  }],
-  "host_permissions": ["https://brofist.io/*", "https://h336.github.io/*"]
+    "run_at": "document_idle"
+  }]
 }
