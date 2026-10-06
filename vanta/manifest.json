@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "VANTA Agent",
+  "version": "2.0",
+  "description": "Нейро-строитель для brofist.io editor",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://brofist.io/*",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "content_scripts": [{
+    "matches": ["https://brofist.io/editor/*"],
+    "js": ["inject.js", "panel.js"],
+    "run_at": "document_idle"
+  }]
+}
