@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "VANTA Agent Bridge",
+  "version": "1.1",
+  "description": "Авто-мост между VANTA Agent и редактором brofist.io",
+  "content_scripts": [{
+    "matches": ["https://brofist.io/editor/*", "https://h336.github.io/Brofist-io-editor/*"],
+    "js": ["inject.js"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }],
+  "host_permissions": ["https://brofist.io/*", "https://h336.github.io/*"]
+}
